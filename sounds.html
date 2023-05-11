@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrance Alerts</title>
+    <script src = "https://cdn.jsdelivr.net/npm/comfy.js/dist/comfy.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js"></script>
+</head>
+<body>
+
+    <script>
+        // For some reason the built in Audio with Javascript wouldn't play the entire audio files, so I used this Howl cdn instead to make it work
+        var eden = new Howl({
+            src: ['soundFiles/Eden2.mp3']
+        })
+        var chappy = new Howl({
+            src: ['soundFiles/chapstick.mp3']
+        })
+        var erin = new Howl({
+            src: ['soundFiles/erin.mp3']
+        })
+        var jam = new Howl({
+            src: ['soundFiles/jam.mp3']
+        })
+        var kuro = new Howl({
+            src: ['soundFiles/kuro.mp3']
+        })
+        var lelling = new Howl({
+            src: ['soundFiles/lelling.mp3']
+        })
+        var marisa = new Howl({
+            src: ['soundFiles/marisa.mp3']
+        })
+        var nelu = new Howl({
+            src: ['soundFiles/Nelu.mp3']
+        })
+        var ory = new Howl({
+            src: ['soundFiles/ory.mp3']
+        })
+        var pika = new Howl({
+            src: ['soundFiles/pika.mp3']
+        })
+        var raph = new Howl({
+            src: ['soundFiles/raph.mp3']
+        })
+        var ryder = new Howl({
+            src: ['soundFiles/ryder.mp3']
+        })
+        var samus = new Howl({
+            src: ['soundFiles/samus.mp3']
+        })
+        var soar = new Howl({
+            src: ['soundFiles/Soar.mp3']
+        })
+        var theo = new Howl({
+            src: ['soundFiles/theo.mp3']
+        })
+        var wigraf = new Howl({
+            src: ['soundFiles/Wigraf.mp3']
+        })
+        var mouse = new Howl({
+            src: ['soundFiles/curb.mp3']
+        })
+        var serious = new Howl({
+            src: ['soundFiles/serious.mp3']
+        })
+        var chicken = new Howl({
+            src: ['soundFiles/chickens.mp3']
+        })
+        var chance = new Howl({
+            src: ['soundFiles/chance.mp3']
+        })
+        var dawg = new Howl({
+            src: ['soundFiles/dawg.mp3']
+        })
+        var gameover = new Howl({
+            src: ['soundFiles/gameover.mp3']
+        })
+        var goodlord = new Howl({
+            src: ['soundFiles/goodlord.mp3']
+        })
+        var nurse = new Howl({
+            src: ['soundFiles/hellonurse.mp3']
+        })
+        var horn = new Howl({
+            src: ['soundFiles/horn.mp3']
+        })
+        var lava = new Howl({
+            src: ['soundFiles/lavahot.mp3']
+        })
+        var law = new Howl({
+            src: ['soundFiles/law.mp3']
+        })
+        var lever = new Howl({
+            src: ['soundFiles/lever.mp3']
+        })
+        var milk = new Howl({
+            src: ['soundFiles/milk.mp3']
+        })
+        var notime = new Howl({
+            src: ['soundFiles/notime.mp3']
+        })
+        var nuts = new Howl({
+            src: ['soundFiles/nuts.mp3']
+        })
+        var omg = new Howl({
+            src: ['soundFiles/omg.mp3']
+        })
+        var profanity = new Howl({
+            src: ['soundFiles/profanity.mp3']
+        })
+        var rough = new Howl({
+            src: ['soundFiles/rough.mp3']
+        })
+        var serious = new Howl({
+            src: ['soundFiles/serious.mp3']
+        })
+        var stinky = new Howl({
+            src: ['soundFiles/stinky.mp3']
+        })
+        var victory = new Howl({
+            src: ['soundFiles/SweetVictory.mp3']
+        })
+        var wrong = new Howl({
+            src: ['soundFiles/wrong.mp3']
+        })
+        var kelly = new Howl({
+            src: ['soundFiles/kelly.mp3']
+        })
+        var seaweed = new Howl({
+            src: ['soundFiles/Seaweed.mp3']
+        })
+        var kelly = new Howl({
+            src: ['soundFiles/Kelly.mp3']
+        })
+
+//Checks ever comment to see if it is from one of the users listed in switch. If it is the user's first message, a sound will play
+        ComfyJS.onChat = (user, message, flags, self, extra) => {
+            switch(user.toLowerCase()) {
+                case "edenshex": 
+                    edensHere();
+                    break;
+                case "chapstickqueen": 
+                    chappysHere();
+                    break;
+                case "erinness": 
+                    erinsHere();
+                    break;
+                case "coyotewolfbear":
+                    jamsHere();
+                    break;
+                case "kurowashi92": 
+                    kurosHere();
+                    break;
+                case "lelling": 
+                    lellingsHere();
+                    break;
+                case "dummythot": 
+                    marisasHere();
+                    break;
+                case "nelu_31": 
+                    nelusHere();
+                    break;
+                case "oryzoides": 
+                    orysHere();
+                    break;
+                case "jpikachu08": 
+                    pikasHere();
+                    break;
+                case "raphprime": 
+                    raphsHere();
+                    break;
+                case "drryder": 
+                    rydersHere();
+                    break;
+                case "samusaranon":
+                    samusHere();
+                    break;
+                case "mythic_mouse": 
+                    tommyHere();
+                    break;
+                case "soaring_spirit":
+                    soarsHere();
+                    break;
+                case "theopoliz": 
+                    theosHere();
+                    break;
+                case "wigraf": 
+                    wigrafHere();
+                    break;
+                case "seaweed_b":
+                    seaweedsHere();
+                    break;
+                case "kwehlua": 
+                    kellysHere();
+                    break;
+        }
+    }
+//Commands for users to trigger audio files when wanted
+        ComfyJS.onCommand = (user, command, message, flags, extra) => {
+            switch(command.toLowerCase()) {
+                case "chickens":
+                case "chicken":
+                    chicken.play();
+                    break;
+                case "chance":
+                    chance.play();
+                    break;
+                case "dawg": 
+                case "dog": 
+                    dawg.play();
+                    break;
+                case "gameover": 
+                    gameover.play();
+                    break;
+                case "goodlord": 
+                    goodlord.play();
+                    break;
+                case "nurse": 
+                    nurse.play();
+                    break;
+                case "horn": 
+                    horn.play();
+                    break;
+                case "lava":
+                    lava.play();
+                    break;
+                case "law": 
+                    law.play();
+                    break;
+                case "lever": 
+                    lever.play();
+                    break;
+                case "milk": 
+                    milk.play();
+                    break;
+                case "notime": 
+                case "no time": 
+                    notime.play();
+                    break;
+                case "nuts":
+                    nuts.play();
+                    break;
+                case "omg": 
+                    omg.play();
+                    break;
+                case "profanity": 
+                    profanity.play();
+                    break;
+                case "rough":
+                    rough.play();
+                    break;
+                case "serious": 
+                    serious.play();
+                    break;
+                case "stinks":
+                case "stinky": 
+                    stinky.play();
+                    break;
+                case "victory": 
+                    victory.play();
+                    break;
+                case "ohno":
+                case "wrong": 
+                    wrong.play();
+                    break;
+                case "curb": 
+                    mouse.play();
+                    break;
+            }
+        }
+
+
+
+//Functions are written this way so that they only execute once per stream
+        var edensHere = (function() {
+            var executed = false;
+            return function() {
+                if(!executed) {
+                    executed = true;
+                    eden.play();
+                }
+            };
+        })();
+
+        var chappysHere = (function() {
+            var executed = false;
+            return function() {
+                if(!executed) {
+                    executed = true;
+                    chappy.play();
+                }
+            };
+        })();
+
+        var jamsHere = (function() {
+            var executed = false;
+            return function() {
+                if(!executed) {
+                    executed = true;
+                    jam.play();
+                }
+            };
+        })();
+
+        var erinsHere = (function() {
+            var executed = false;
+            return function() {
+                if(!executed) {
+                    executed = true;
+                    erin.play();
+                }
+            };
+        })();
+        
+        var kurosHere = (function() {
+            var executed = false;
+            return function() {
+                if(!executed) {
+                    executed = true;
+                    kuro.play();
+                }
+            };
+        })();
+
+        var lellingsHere = (function() {
+            var executed = false;
+            return function() {
+                if(!executed) {
+                    executed = true;
+                    lelling.play();
+                }
+            };
+        })();
+
+        var marisasHere = (function() {
+            var executed = false;
+            return function() {
+                if(!executed) {
+                    executed = true;
+                    marisa.play();
+                }
+            };
+        })();
+
+        var nelusHere = (function() {
+            var executed = false;
+            return function() {
+                if(!executed) {
+                    executed = true;
+                    nelu.play();
+                }
+            };
+        })();
+
+        var orysHere = (function() {
+            var executed = false;
+            return function() {
+                if(!executed) {
+                    executed = true;
+                    ory.play();
+                }
+            };
+        })();
+
+        var pikasHere = (function() {
+            var executed = false;
+            return function() {
+                if(!executed) {
+                    executed = true;
+                    pika.play();
+                }
+            };
+        })();
+
+        var raphsHere = (function() {
+            var executed = false;
+            return function() {
+                if(!executed) {
+                    executed = true;
+                    raph.play();
+                }
+            };
+        })();
+
+        var rydersHere = (function() {
+            var executed = false;
+            return function() {
+                if(!executed) {
+                    executed = true;
+                    ryder.play();
+                }
+            };
+        })();
+
+        var samusHere = (function() {
+            var executed = false;
+            return function() {
+                if(!executed) {
+                    executed = true;
+                    samus.play();
+                }
+            };
+        })();
+
+        var tommyHere = (function() {
+            var executed = false;
+            return function() {
+                if(!executed) {
+                    mouse.play();
+                    executed = true;
+                }
+            };
+        })();
+
+        var soarsHere = (function() {
+            var executed = false;
+            return function() {
+                if(!executed) {
+                    executed = true;
+                    soar.play();
+                }
+            };
+        })();
+
+        var theosHere = (function() {
+            var executed = false;
+            return function() {
+                if(!executed) {
+                    executed = true;
+                    theo.play();
+                }
+            };
+        })();
+
+        var wigrafHere = (function() {
+            var executed = false;
+            return function() {
+                if(!executed) {
+                    executed = true;
+                    wigraf.play();
+                }
+            };
+        })();
+
+        var seaweedsHere = (function() {
+            var executed = false;
+            return function() {
+                if(!executed) {
+                    executed = true;
+                    seaweed.play();
+                }
+            };
+        })();
+
+        var kellysHere = (function() {
+            var executed = false;
+            return function() {
+                if(!executed) {
+                    executed = true;
+                    kelly.play();
+                }
+            };
+        })();
+
+        ComfyJS.Init("FantasticMrScott");
+    </script>
+</body>
+</html>
